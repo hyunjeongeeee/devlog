@@ -3,8 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/dist/css/global-output.css}" />
-    <script src="https://kit.fontawesome.com/301da44291.js" crossorigin="anonymous"></script>
+    <th:block th:insert="~{fragments/global-config :: global-header}"/>
     <title>Devlog-Hyunjeong</title>
 </head>
 <body>
@@ -12,7 +11,7 @@
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 
 <!-- 메인 페이지 시작부분 -->
-<main class="w-screen h-screen float-left text-center pt-24 bg-beige ">
+<main class="w-screen h-screen float-left text-center pt-24 bg-beige">
 
     <div class="w-3/5 h-full wrap-box float-right bg-white relative">
         <figure class="profile-wrap">

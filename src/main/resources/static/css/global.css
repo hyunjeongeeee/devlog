@@ -7,10 +7,6 @@
     @apply w-screen fixed left-0 top-0 text-black shadow-xl z-50 bg-slate-50
 }
 
-.my-header>div>h1{
-    @apply text-3xl font-bold pl-7 pt-7
-}
-
 .my-top-nav {
     @apply h-24 m-auto p-6 float-right pr-24
 }
@@ -31,8 +27,6 @@
     shadow-2xl
 }
 
-
-
 .profile-line {
     width: 50px;
     height: 5px;
@@ -51,6 +45,33 @@
 }
 .profile-sns-wrap>li{
     @apply hover:text-gray
-
 }
 
+/* 스크롤 스타일 */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4c4b4b;
+}
+
+/* 글로벌 overflow 설정 */
+html, body {
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+    overflow-y: auto; /* 세로 스크롤 방지 (넘칠 때만 생기도록 설정) */
+}
+
+/* overflow가 발생했을 때만 스크롤 보이게 하기 */
+.scrollable {
+    overflow: auto; /* 내용이 넘칠 때만 스크롤 표시 */
+}
