@@ -14,7 +14,7 @@
 <main class="w-screen h-screen float-left text-center pt-24 bg-beige">
 
     <div class="w-3/5 h-full wrap-box float-right bg-white relative">
-        <figure class="profile-wrap">
+        <figure class="profile-box profile-wrap">
             <div class="profile-image-area">
                 <img class="w-auto h-full mx-auto"
                      th:src="@{/img/profile.png}" alt="프로필사진">
@@ -36,7 +36,7 @@
         </figure>
 
         <!-- 우측 소개글 영역 -->
-        <div class="w-[375px] h-auto mx-auto container p-10 absolute top-36 left-36 text-left">
+        <div class="profile-box w-[375px] h-auto mx-auto container p-10 absolute top-36 left-36 text-left">
             <p class=" text-7xl font-black pt-5 pb-5">HELLO</p>
             <p class="text-2xl mb-5">Here's who I am & what I do</p>
 
@@ -61,6 +61,6 @@
 </main>
 
 <footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
-<th:block th:replace="~{fragments/global-config :: mainScripts}"/>
+<th:block th:replace="~{fragments/global-config :: global-scripts}"/>
 </body>
 </html>
