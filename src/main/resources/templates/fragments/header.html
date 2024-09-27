@@ -11,16 +11,16 @@
 <header class="my-header">
 
     <div class="float-left">
-        <h1> HYUNJEONG'S DEVLOG</h1>
+        <h1 class="text-xl font-bold pl-7 pt-7"> HYUNJEONG'S DEVLOG</h1>
     </div>
 
     <!-- TopMenu Area -->
     <nav class="my-top-nav">
         <ul class="flex justify-between w-[32rem] pt-3">
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">RESUME</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a th:href="@{/}">ABOUT ME</a></li>
+            <li><a th:href="@{/resume}">RESUME</a></li>
+            <li><a th:href="@{/projects}">PROJECTS</a></li>
+            <li><a th:href="@{/contact}">CONTACT</a></li>
         </ul>
     </nav>
 </header>
