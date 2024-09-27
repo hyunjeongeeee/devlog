@@ -9,54 +9,59 @@
 </head>
 <body>
 
-<header>
-    <!-- GNB Area -->
-    <nav class="float-right bg-cyan-600 bg-opacity-50">
-        <ul class="flex justify-between w-40 pt-3">
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a></li>
-            <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-<!--            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>-->
-        </ul>
-    </nav>
+<header th:replace="~{fragments/header :: header-fragment}"></header>
 
-    <!-- TopMenu Area -->
-    <nav class="w-screen h-24 m-auto bg-cyan-600 bg-opacity-50 p-6">
-        <ul class="flex justify-between w-[32rem] pt-3">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">RESUME</a></li>
-            <li><a href="#">WORK</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- 메인 페이지 시작부분 -->
+<main class="w-screen h-screen float-left text-center pt-24 bg-beige ">
 
-<main class="w-screen h-full float-left bg-slate-300 bg-opacity-50 text-center">
-    <h1>
-        HYUNJEONG'S DEVLOG <br>
-        Welcome my site!
-    </h1>
-    <section class="w-screen h-48 float-left mx-auto bg-pink-300  bg-opacity-50">
-        <div class="container mx-auto bg-slate-400 bg-opacity-50">"컨테이너 영역"</div>
-    </section>
+    <div class="w-3/5 h-full wrap-box float-right bg-white relative">
+        <figure class="profile-wrap">
+            <div class="profile-image-area">
+                <img class="w-auto h-full mx-auto"
+                     th:src="@{/img/profile.png}" alt="프로필사진">
+            </div>
+            <figcaption class="profile-figcaption">
+                <h3 class="text-2xl font-medium">HYUN JEONG KIM</h3>
+                    <div class="profile-line"> </div>
+                <p class="text-2xl font-thin pt-3 pb-3">backend developer</p>
+            </figcaption>
+            <!-- 프로필 링크 -->
+            <div class="profile-sns-wrap">
+                <ul class="flex justify-between w-40 mx-auto">
+                    <li><a href="https://www.instagram.com/h_yunjeong_/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="mailto:hyunjeong9592@gmail.com?subject=안녕하세요."><i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/hyunjeongeeee"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://velog.io/@hyunjeong9592/posts"><i class="fa-solid fa-book-open"></i></a></li>
+                </ul>
+            </div>
+        </figure>
+
+        <!-- 우측 소개글 영역 -->
+        <div class="w-[375px] h-auto mx-auto container p-10 absolute top-36 left-36 text-left">
+            <p class=" text-7xl font-black pt-5 pb-5">HELLO</p>
+            <p class="text-2xl mb-5">Here's who I am & what I do</p>
+
+            <ul class="mx-auto pl-12">
+                <li class="float-left hover:text-gray">
+                    <a class="rounded-lg block p-2.5 border-beige hover:bg-light-beige transition duration-300 mr-5" href="#">RESUME</a>
+                </li>
+                <li class="float-left hover:text-gray">
+                    <a class="rounded-lg block p-2.5 border-beige hover:bg-light-beige transition duration-300" href="#">PROJECTS</a>
+                </li>
+            </ul>
+            <div class="text-wrap clear-both pt-5">
+                <p class="mb-5">
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+                </p>
+                <p>
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+            </div>
+        </div>
+    </div>
 </main>
 
-
-
-<section class="w-screen h-48 float-left mx-auto bg-fuchsia-200 bg-opacity-50">
-    <div>섹션2</div>
-</section>
-
-<footer class="w-screen text-center bg-green-300 bg-opacity-50 clear-both">
-    Copyright 2024. Hyunjeong All rights reserved.
-</footer>
-
+<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
 <th:block th:replace="~{fragments/global-config :: mainScripts}"/>
-
-
 </body>
 </html>

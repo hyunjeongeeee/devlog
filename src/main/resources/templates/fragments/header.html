@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header-fragment</title>
+</head>
+<body>
+
+<th:block th:fragment="header-fragment">
+<header class="my-header">
+
+    <div class="float-left">
+        <h1> HYUNJEONG'S DEVLOG</h1>
+    </div>
+
+    <!-- TopMenu Area -->
+    <nav class="my-top-nav">
+        <ul class="flex justify-between w-[32rem] pt-3">
+            <li><a href="#">ABOUT ME</a></li>
+            <li><a href="#">RESUME</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+</th:block>
+</body>
+</html>

@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.my-header {
+    @apply w-screen fixed left-0 top-0 text-black shadow-xl z-50 bg-slate-50
+}
+
+.my-header>div>h1{
+    @apply text-3xl font-bold pl-7 pt-7
+}
+
+.my-top-nav {
+    @apply h-24 m-auto p-6 float-right pr-24
+}
+.my-top-nav>ul>li {
+    @apply transition duration-150 hover:text-beige
+}
+
+/* 좌측 프로필 영역 */
+.wrap-box {
+    @apply w-8/12 h-48 mx-auto bg-gray container
+}
+
+.profile-wrap {
+    @apply h-auto mx-auto container
+    bg-light-beige pt-3.5
+    absolute -left-60 top-20
+    w-[375px]
+    shadow-2xl
+}
+
+
+
+.profile-line {
+    width: 50px;
+    height: 5px;
+    @apply mx-auto mt-5 mb-5 bg-neutral-500
+}
+
+.profile-image-area {
+    @apply h-4/6 p-10
+}
+
+.profile-figcaption {
+    @apply pt-5 pb-5
+}
+.profile-sns-wrap {
+    @apply p-3 bg-white
+}
+.profile-sns-wrap>li{
+    @apply hover:text-gray
+
+}
+
