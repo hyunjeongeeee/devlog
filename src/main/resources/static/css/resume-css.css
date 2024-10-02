@@ -1,4 +1,4 @@
-.resume-box {
+.project-box {
     opacity: 0; /* 초기 상태: 투명하게 */
     transform: translateY(20px); /* 아래로 20px 이동 */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 애니메이션 효과 */

@@ -4,91 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <th:block th:insert="~{fragments/global-config :: global-header}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/resume-css-output.css}">
     <title>[Devlog-Hyunjeong's]-resume</title>
 </head>
 <body>
 
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 
+<th:block th:fragment="resume-fragment">
+
 <!-- 메인 -->
 <section class="w-screen float-left text-center py-24 bg-beige mx-auto">
 
-    <h2 class="text-4xl font-black pt-20 pb-5 text-center">RESUME</h2>
+<!--    <h2 class="text-4xl font-black pt-20 pb-5 text-center">RESUME</h2>-->
+    <!--기술스택-->
+    <div class="w-screen pt-10 mx-auto float-left">
+        <div class="w-[48rem] mx-auto">
+            <h2 class="text-4xl font-black pt-20 pb-10 text-center">Skills</h2>
+        </div>
+        <ul class="skills grid gap-6 sm:grid-cols-2 md:grid-cols-4 list-none p-0">
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="java" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">Java</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="javascript" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">Javascript</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="html_css" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">HTML5 & CSS3</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="mysql" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">MySQL</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="oracle" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">Oracle</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="jpa" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">JPA</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="aws" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">AWS</figcaption>
+                </figure>
+            </li>
+            <li class="skills__item flex justify-center">
+                <figure>
+                    <canvas id="docker" width="200" height="200" class="block"></canvas>
+                    <figcaption class="mt-2 text-center font-medium">Docker</figcaption>
+                </figure>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 자격증-->
+    <div class="w-screen pt-10 mx-auto float-left">
+        <div class="w-[48rem] mx-auto">
+            <h2 class="text-4xl font-black pt-20 pb-10 text-center">License</h2>
+        </div>
+
+        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
+                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
+            <div class="w-1/3 text-wrap float-left">
+                <p class="mb-5 p-5">정보처리산업기사</p>
+                <p class="mb-5 p-5">보육교사 자격증(2급)</p>
+                <p class="mb-5 p-5">운전면허보통(2종)</p>
+                <p class="mb-5 p-5">교원자격증(실기교사)</p>
+            </div>
+            <div class="scrollable w-2/3 h-full text-wrap float-left">
+                <p class="mb-5 p-5">한국산업인력공단</p>
+                <p class="mb-5 p-5">보건복지부</p>
+                <p class="mb-5 p-5">경기남부지방경찰청</p>
+                <p class="mb-5 p-5">백석예술대학교</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 학력 및 교육 -->
+    <div class="w-screen pt-10 mx-auto float-left">
+        <div class="w-[48rem] mx-auto">
+            <h2 class="text-4xl font-black pt-20 pb-10 text-center">Education</h2>
+        </div>
+
+        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
+                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
+            <div class="w-1/3 text-wrap float-left">
+                <p class="mb-5 p-5">항해99</p>
+                <p class="mb-5 p-5">이젠아카데미 컴퓨터학원</p>
+                <p class="mb-5 p-5">휴넷(온라인교육)</p>
+                <p class="mb-5 p-5">백석예술대학교</p>
+            </div>
+            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
+                <p class="mb-5 p-5">취업리부트코스(2기)</p>
+                <p class="mb-5 p-5">자바(Java) 웹개발 프로그래밍 정보처리산업기사</p>
+                <p class="mb-5 p-5">처음시작하는 자바프로그래밍-초급</p>
+                <p class="mb-5 p-5">실용음악학과 보컬전공</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 경력 -->
+
 
     <div class="w-screen pt-10 mx-auto float-left">
         <div class="w-[48rem] mx-auto">
-            <p class="text-2xl font-medium  mb-10 text-left">Experience</p>
+            <h2 class="text-4xl font-black pt-20 pb-10 text-center">Experience</h2>
         </div>
-
-        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
-                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">            <div class="w-1/3 text-wrap float-left">
-                <p class="mb-5 p-5">
-                    2020-2023<br>회사명1
-                </p>
-            </div>
-            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto ">
-                <p class="p-5">
-                    대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 군사재판을 관할하기 위하여 특별법원으로서 군사법원을 둘 수 있다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
-                    제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.
-                </p>
-            </div>
-        </div>
-
-        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
-                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">            <div class="w-1/3 text-wrap float-left">
-                <p class="mb-5 p-5">
-                    2018-2019<br>회사명2
-                </p>
-            </div>
-            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
-                <p class="p-5">
-                    대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 군사재판을 관할하기 위하여 특별법원으로서 군사법원을 둘 수 있다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
-                    제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.
-                </p>
-            </div>
-        </div>
-
-        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
-                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">            <div class="w-1/3 text-wrap float-left">
-                <p class="mb-5 p-5">
-                    2018-2019<br>회사명3
-                </p>
-            </div>
-            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
-                <p class="p-5">
-                    대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 군사재판을 관할하기 위하여 특별법원으로서 군사법원을 둘 수 있다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
-                    제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.
-                </p>
-            </div>
-        </div>
-
-
 
         <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
                     opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
             <div class="w-1/3 text-wrap float-left">
                 <p class="mb-5 p-5">
-                    2018-2019<br>회사명4
+                    2020.03-2023.02(3년)<br>위례라온어린이집
                 </p>
             </div>
             <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
                 <p class="p-5">
-                    대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 군사재판을 관할하기 위하여 특별법원으로서 군사법원을 둘 수 있다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
-                    제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.
+                    어린이집 개원 초기에 근무하며, 체계가 없는 환경에서 비품 및 회계 관련 서류를 관리하고 효율적인 업무 처리를 위해 동료 교사들과 협력하며 커뮤니케이션 능력을 발전시켰습니다.
                 </p>
             </div>
         </div>
 
-
+        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
+                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
+            <div class="w-1/3 text-wrap float-left">
+                <p class="mb-5 p-5">
+                    2018.05-2019.06(1년2개월)<br>마북e편한세상어린이집
+                </p>
+            </div>
+            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
+                <p class="p-5">
+                    초임교사로서 선임 교사의 지도 아래 사회 경험을 쌓았습니다. 직장 내 구성원들과 협력하는 방법 및 문제를 지혜롭게 해결하는 방법을 배우며 성장할 수 있는 소중한 경험이었습니다.
+                </p>
+            </div>
+        </div>
     </div>
-
 </section>
+<!--<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>-->
+<!--<th:block th:replace="~{fragments/global-config :: global-scripts}"/>-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script th:src="@{/js/resume-script.js}"></script>
+<script th:src="@{/js/resume-skills-script.js}"></script>
+</th:block>
 
-
-
-
-<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
-<script th:src="@{/js/resume-script.js}"></script>
-<th:block th:replace="~{fragments/global-config :: global-scripts}"/>
 </body>
 </html>
