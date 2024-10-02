@@ -22,5 +22,6 @@ module.exports = {
     },  // 다양한 상태에 따른 스타일 확장 (hover, active 등)
 
   },
-  plugins: ['@tailwindcss/forms'],  // 플러그인 추가하는 곳 (예: Tailwind Forms 등)
+  plugins: ['@tailwindcss/forms',
+  ] // 플러그인 추가하는 곳 (예: Tailwind Forms 등)
 }
