@@ -48,59 +48,70 @@
 }
 
 /* 스크롤 스타일 */
-::-webkit-scrollbar {
-    width: 5px;
-}
+/*::-webkit-scrollbar {*/
+/*    width: 5px;*/
+/*}*/
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*}*/
 
-::-webkit-scrollbar-thumb {
-    background: #e1e1e1;
-    border-radius: 7px;
-}
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #e1e1e1;*/
+/*    border-radius: 7px;*/
+/*}*/
 
-::-webkit-scrollbar-thumb:hover {
-    background: #4c4b4b;
-}
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #4c4b4b;*/
+/*}*/
 
 /* 글로벌 overflow 설정 */
-html, body {
-    overflow-x: hidden; /* 가로 스크롤 방지 */
-    overflow-y: auto; /* 세로 스크롤 방지 (넘칠 때만 생기도록 설정) */
-}
+/*html, body {*/
+/*    overflow-x: hidden; !* 가로 스크롤 방지 *!*/
+/*    overflow-y: auto; !* 세로 스크롤 방지 (넘칠 때만 생기도록 설정) *!*/
+/*}*/
 
-/* overflow가 발생했을 때만 스크롤 보이게 하기 */
-.scrollable {
-    overflow: auto; /* 내용이 넘칠 때만 스크롤 표시 */
-}
+/*!* overflow가 발생했을 때만 스크롤 보이게 하기 *!*/
+/*.scrollable {*/
+/*    overflow: auto; !* 내용이 넘칠 때만 스크롤 표시 *!*/
+/*}*/
 
-/* fade-in 효과 적용*/
-.profile-box {
-    opacity: 0; /* 초기 상태: 투명하게 */
-    transform: translateY(20px); /* 아래로 이동 */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 애니메이션 효과 */
-}
+/*!* about page *!*/
+/*!* fade-in 효과 적용*!*/
+/*.profile-box {*/
+/*    opacity: 0; !* 초기 상태: 투명하게 *!*/
+/*    transform: translateY(20px); !* 아래로 이동 *!*/
+/*    transition: opacity 0.5s ease-out, transform 0.5s ease-out; !* 애니메이션 효과 *!*/
+/*}*/
 
-.profile-box.visible {
-    opacity: 1; /* 보일 때: 불투명하게 */
-    transform: translateY(0); /* 원래 위치로 이동 */
-}
+/*.profile-box.visible {*/
+/*    opacity: 1; !* 보일 때: 불투명하게 *!*/
+/*    transform: translateY(0); !* 원래 위치로 이동 *!*/
+/*}*/
 
 
 /**********************************/
 /* resume page */
-.resume-box {
+.resume-box, .project-box {
     opacity: 0; /* 초기 상태: 투명하게 */
-    transform: translateY(20px); /* 아래로 20px 이동 */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 애니메이션 효과 */
+    color: rgba(136, 136, 136,.5);
+    transform: translateY(30px); /* 아래로 30px 이동 */
+    transition: transform 0.8s ; /* 애니메이션 효과 */
 }
 
-.resume-box.visible {
+.visible {
     opacity: 1; /* 보일 때: 불투명하게 */
+    color: black;
     transform: translateY(0); /* 원래 위치로 이동 */
 }
+
+/**********************************/
+
+
+
+
+
+
 
 
 
