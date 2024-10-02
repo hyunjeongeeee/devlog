@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:insert="~{fragments/global-config :: global-header}"/>
+    <title>[Devlog-Hyunjeong's]-projects</title>
+</head>
+<body>
+
+<header th:replace="~{fragments/header :: header-fragment}"></header>
+<th:block th:fragment="project-fragment">
+
+<!-- 메인 -->
+<section class="w-screen float-left py-24 bg-beige mx-auto relative">
+    <h2 class="text-4xl font-black pt-20 pb-5 text-center">PROJECTS</h2>
+    <div class="w-[55rem] pt-10 mx-auto">
+        <div class="project-slider bg-white">
+            <div class="bg-white p-6 rounded">
+                <h3 class="text-2xl font-medium mb-4">예약구매 프로젝트(Preorder project)</h3>
+                <ul class="mb-20">
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Java21</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">SpringBoot</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">JPA</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">MySQL</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Redis</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Docker</li>
+                </ul>
+                <div class="clear-both">
+                    <p>1. 프로젝트 소개</p>
+                    <p class="mb-2">독립적인 모듈 구조를 통해 각 기능이 최적화 되어 유연하고 확장 가능한 서비스</p>
+                    <p>2. 개발기간</p>
+                    <p class="mb-2">24.04.17. ~</p>
+                    <p>3. MSA(MicroService Architecture) 리팩토링</p>
+                    <p class="mb-2">서비스의 확장성과 유지보수성을 향상</p>
+                    <p>4. Docker-Compose를 통한 컨테이너 관리</p>
+                    <p class="mb-2">각 서비스의 이미지, 포트 매핑, 볼륨 마운트 등을 정의하여 개발 환경 표준화</p>
+                    <p>5. API Gateway 구축</p>
+                    <p class="mb-2">- 시스템의 안정성과 서비스 관리의 용이성</p>
+                    <p>6. Eureka Server도입</p>
+                    <p>로드밸런싱(Load Balancing)</p>
+                    <p>⇒ 클라이언트 측에서 서비스 인스턴스로의 트래픽을 균등하게 분배함으로 인한 성능 최적화</p>
+                    <p>장애 내성(Fault Tolerance)</p>
+                    <p class="mb-2">⇒ 실패한 인스턴스를 자동으로 제외하여 시스템의 안정성과 가용성 향상</p>
+                    <p>7. 주문 상태 관리</p>
+                    <p>Spring Scheduler를 통해 주문 상태는 자동 업데이트</p>
+                    <p class="mb-2">⇒ 주문 상태가 '배송중', '배송완료' 등으로 지정된 시간에 자동으로 업데이트</p>
+                    <p>8. 주문 재고 부족시 에러발생시켜 주문 제어</p>
+                    <p class="mb-2">Redis 의 Redisson 라이브러리를 통해 분산락을 적용하여 동시성이슈 해결</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded">
+                <h3 class="text-2xl font-medium mb-4">그르릉 프로젝트(Grr-reung project)</h3>
+                <ul class="mb-20">
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Java17</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">SpringBoot</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Javascript</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">MySQL</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Ec2</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">RDS</li>
+                </ul>
+                <div>
+                    <p>1. 프로젝트 소개</p>
+                    <p>스프링부트를 기반으로 개발된 강아지용품 쇼핑몰로, REST API를 통해 클라이언트와 서버 간의</p>
+                    <p class="mb-2">효율적인 통신 구현 및 모놀리식 아키텍처를 통한 기능 통합 관리 용이성을 제공하는 시스템</p>
+                    <p>2. 개발기간</p>
+                    <p>23.11. ~ 23.12</p>
+                    <p>3. 배포환경</p>
+                    <p>AWS EC2 인스턴스 설정: 웹 서버를 구성하여 애플리케이션 호스팅</p>
+                    <p class="mb-2">RDS 구성: MySQL DB를 구축하여 데이터 관리 및 저장</p>
+                    <p>4. DBMS 리팩토링 ( Oracle → MySQL )</p>
+                    <p>리팩토링 이유 ❓</p>
+                    <p>⇒ 비용 절감: 오픈 소스 제공  (라이선스 비용 없음)</p>
+                    <p>⇒ 적은 리소스 요구: 상대적으로 적은 리소스 요구,</p>
+                    <p class="mb-2">작은 규모의 프로젝트나 개발 환경에서 가벼운  데이터베이스 솔루션으로 MySQL 선택 가능</p>
+                    <p>5. 아이템 페이지 세션 관련 오류 해결</p>
+                    <p>로그인하지 않은 상태에서 상품상세 페이지 접속 오류 발생</p>
+                    <p>⇒ 원인: 아이템 페이지의 form 액션 태그에 Session에 아이디가 있을 경우만 작동하게 설계</p>
+                    <p>⇒ 해결: 상품 정보 전달을 하는 form 액션 태그에 Session에 아이디가 있는지 여부를 확인하는</p>
+                    <p class="mb-2">조건문(th:if) 추가하여 로그아웃 상태에서도 접근 가능하게 수정</p>
+                    <p>6. 상품 등록 기능 구현</p>
+                    <p>서버 측에서 해당 요청 수신 ⇒ 받은 데이터 디코딩 ⇒ 적절한 데이터베이스 쿼리 사용하여 상품 정보 저장</p>
+                    <p>유연성과 확장성 고려 ⇒ RESTful API 사용하여 클라이언트와 서버 독립적 개발 가능</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded">
+                <h3 class="text-2xl font-medium mb-4">프로젝트명</h3>
+                <div>
+                    <p class="mb-2">준비중입니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute top-[55%] left-1/2 text-2xl">
+            <button type="button" id="prevArrow" class="slick-arrow absolute right-[28.5rem] text-stone-600 hover:text-gray duration-300"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" id="nextArrow" class="slick-arrow absolute left-[28.5rem] text-stone-600 hover:text-gray duration-300"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+</section>
+
+
+
+
+<!--<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>-->
+<!--<th:block th:replace="~{fragments/global-config :: global-scripts}"/>-->
+<script th:src="@{/js/projects-script.js}"></script>
+</th:block>
+</body>
+</html>
