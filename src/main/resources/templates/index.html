@@ -14,22 +14,19 @@
 
 <!-- 메인 페이지 시작부분 -->
 <main class="w-screen h-screen float-left text-center pt-24 main-background">
-
     <div class="main-wrap w-80 h-80 border-white border-solid border-4 mx-auto mt-52 pt-32 text-ivory bg-transparent">
         <h3 class="text-4xl font-medium mb-2">HYUNJEONG'S</h3>
         <h3 class="text-3xl font-medium">DEVLOG</h3>
     </div>
 </main>
 
-<th:block th:replace="~{/sub/about-me :: about-fragment}"></th:block>>
+<th:block th:replace="~{sub/about-me :: about-fragment}"></th:block>>
 <th:block th:replace="~{sub/projects :: project-fragment}"></th:block>
 <th:block th:replace="~{sub/resume :: education-fragment}"></th:block>
 <th:block th:replace="~{sub/resume :: skill-fragment}"></th:block>
 <th:block th:replace="~{sub/contact :: contact-fragment}"></th:block>
 
-
 <th:block th:replace="~{fragments/global-config :: global-scripts}"/>
-
 <footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
 </body>
 </html>
