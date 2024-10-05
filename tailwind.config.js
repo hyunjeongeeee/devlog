@@ -9,10 +9,13 @@ module.exports = {
     },
     extend: {// 기본 테마를 확장하거나 덮어쓰기 위해 사용하는 섹션
       colors: {
-        'black' : '#171717',
+        'black' : '#131313',
+        'ivory' : '#F0F0F0',
         'gray' : '#F8FAFC',
-        'beige' : '#E6DACE',
-        'light-beige' : '#F4ECE6'
+        'light-gray' : '#E8E9E9',
+        'dark-gray' : '#3D3E42',
+        'cream' : '#E6E5E6',
+        'light-green' : '#66CC99',
       },
     },
   },

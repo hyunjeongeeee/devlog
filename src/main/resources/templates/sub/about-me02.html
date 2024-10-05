@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:insert="~{fragments/global-config :: global-header}"/>
+    <title>Devlog-Hyunjeong</title>
+</head>
+<body class="bg-white">
+
+<header th:replace="~{fragments/header :: header-fragment}"></header>
+
+<!-- 메인 페이지 시작부분 -->
+<main class="w-screen h-screen float-left text-center pt-24">
+
+    <div class="w-3/5 h-full wrap-box float-right relative">
+        <figure class="profile-box profile-wrap">
+            <div class="profile-image-area">
+                <img class="w-auto h-full mx-auto"
+                     th:src="@{/img/profile.png}" alt="프로필사진">
+            </div>
+            <figcaption class="profile-figcaption">
+                <h3 class="text-2xl font-medium">HYUN JEONG KIM</h3>
+                    <div class="profile-line"> </div>
+                <p class="text-2xl font-thin pt-3 pb-3">backend developer</p>
+            </figcaption>
+            <!-- 프로필 링크 -->
+            <div class="profile-sns-wrap">
+                <ul class="flex justify-between w-40 mx-auto">
+                    <li><a href="https://www.instagram.com/h_yunjeong_/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="mailto:hyunjeong9592@gmail.com?subject=안녕하세요."><i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/hyunjeongeeee"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://velog.io/@hyunjeong9592/posts"><i class="fa-solid fa-book-open"></i></a></li>
+                </ul>
+            </div>
+        </figure>
+
+        <!-- 우측 소개글 영역 -->
+        <div class="profile-box w-[375px] h-auto mx-auto container p-10 absolute top-36 left-36 text-left">
+            <p class=" text-7xl font-black pt-5 pb-5">HELLO</p>
+            <p class="text-2xl mb-5">Here's who I am & what I do</p>
+
+            <ul class="mx-auto pl-12">
+                <li class="float-left hover:text-gray">
+                    <a class="rounded-lg block p-2.5 border-gray hover:bg-gray transition duration-300 mr-5" th:href="@{/resume}">RESUME</a>
+                </li>
+                <li class="float-left hover:text-gray">
+                    <a class="rounded-lg block p-2.5 border-gray hover:bg-gray transition duration-300" th:href="@{/projects}">PROJECTS</a>
+                </li>
+            </ul>
+            <div class="text-wrap clear-both pt-5">
+                <p class="mb-5">백엔드 개발자 김현정입니다</p>
+                <p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
+</body>
+</html>

@@ -10,101 +10,93 @@
 
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 <th:block th:fragment="project-fragment">
-
 <!-- 메인 -->
-<section class="w-screen float-left py-24 bg-beige mx-auto relative">
-    <h2 class="text-4xl font-black pt-20 pb-5 text-center">PROJECTS</h2>
-    <div class="w-[55rem] pt-10 mx-auto">
-        <div class="project-slider bg-white">
-            <div class="bg-white p-6 rounded">
-                <h3 class="text-2xl font-medium mb-4">예약구매 프로젝트(Preorder project)</h3>
-                <ul class="mb-20">
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Java21</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">SpringBoot</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">JPA</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">MySQL</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Redis</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Docker</li>
+    <section class="w-screen float-left text-gray py-24 bg-cream">
+        <div class="w-3/5 h-full mx-auto py-20">
+            <div class="w-full mx-auto mb-16 pl-6" >
+                <h2 class="text-4xl font-black text-dark-gray mb-4">Projects</h2>
+                <div class="w-14 h-1 bg-dark-gray"> </div>
+            </div>
+
+            <div class="flex flex-wrap text-xl flex-col border-b-2 border-solid border-gray pb-7 mb-7">
+                <ul class="text-base font-light">
+                    <li class="w-full text-3xl font-bold mb-1 float-left ">예약구매 프로젝트(Preorder project)</li>
+                    <li class="text-base font-light float-left pl-5 py-3 text-gray"><i class="fa-solid fa-user"></i><span class="pl-2">BE 1인</span></li>
+                    <li class="text-base font-light float-left pl-5 py-3 text-gray"><i class="fa-regular fa-calendar-check"></i><span class="pl-2">2024.04~2024.06</span></li>
                 </ul>
-                <div class="clear-both">
-                    <p>1. 프로젝트 소개</p>
-                    <p class="mb-2">독립적인 모듈 구조를 통해 각 기능이 최적화 되어 유연하고 확장 가능한 서비스</p>
-                    <p>2. 개발기간</p>
-                    <p class="mb-2">24.04.17. ~</p>
-                    <p>3. MSA(MicroService Architecture) 리팩토링</p>
-                    <p class="mb-2">서비스의 확장성과 유지보수성을 향상</p>
-                    <p>4. Docker-Compose를 통한 컨테이너 관리</p>
-                    <p class="mb-2">각 서비스의 이미지, 포트 매핑, 볼륨 마운트 등을 정의하여 개발 환경 표준화</p>
-                    <p>5. API Gateway 구축</p>
-                    <p class="mb-2">- 시스템의 안정성과 서비스 관리의 용이성</p>
-                    <p>6. Eureka Server도입</p>
-                    <p>로드밸런싱(Load Balancing)</p>
-                    <p>⇒ 클라이언트 측에서 서비스 인스턴스로의 트래픽을 균등하게 분배함으로 인한 성능 최적화</p>
-                    <p>장애 내성(Fault Tolerance)</p>
-                    <p class="mb-2">⇒ 실패한 인스턴스를 자동으로 제외하여 시스템의 안정성과 가용성 향상</p>
-                    <p>7. 주문 상태 관리</p>
-                    <p>Spring Scheduler를 통해 주문 상태는 자동 업데이트</p>
-                    <p class="mb-2">⇒ 주문 상태가 '배송중', '배송완료' 등으로 지정된 시간에 자동으로 업데이트</p>
-                    <p>8. 주문 재고 부족시 에러발생시켜 주문 제어</p>
-                    <p class="mb-2">Redis 의 Redisson 라이브러리를 통해 분산락을 적용하여 동시성이슈 해결</p>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded">
-                <h3 class="text-2xl font-medium mb-4">그르릉 프로젝트(Grr-reung project)</h3>
-                <ul class="mb-20">
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Java17</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">SpringBoot</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Javascript</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">MySQL</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">Ec2</li>
-                    <li class="p-2 mr-3 float-left bg-stone-300 text-xs rounded-xl">RDS</li>
+                <ul class="mb-5 text-base font-light">
+                    <li class="float-left pl-5"><a href="https://github.com/hyunjeongeeee/preorder"
+                                              class="block underline p-1 hover:text-stone-500 hover:border-b-1 hover:decoration-2 duration-100">
+                        <i class="fa-brands fa-github"></i><span class="pl-2">Github 바로가기</span></a></li>
+                    <li class="float-left pl-5"><a href="https://velog.io/@hyunjeong9592/series/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85"
+                                              class="block underline p-1 hover:text-stone-500 hover:decoration-2 hover:border-stone-500 duration-100">
+                        <i class="fa-solid fa-rocket"></i><span class="pl-2">트러블슈팅 바로가기</span></a></li>
                 </ul>
-                <div>
-                    <p>1. 프로젝트 소개</p>
-                    <p>스프링부트를 기반으로 개발된 강아지용품 쇼핑몰로, REST API를 통해 클라이언트와 서버 간의</p>
-                    <p class="mb-2">효율적인 통신 구현 및 모놀리식 아키텍처를 통한 기능 통합 관리 용이성을 제공하는 시스템</p>
-                    <p>2. 개발기간</p>
-                    <p>23.11. ~ 23.12</p>
-                    <p>3. 배포환경</p>
-                    <p>AWS EC2 인스턴스 설정: 웹 서버를 구성하여 애플리케이션 호스팅</p>
-                    <p class="mb-2">RDS 구성: MySQL DB를 구축하여 데이터 관리 및 저장</p>
-                    <p>4. DBMS 리팩토링 ( Oracle → MySQL )</p>
-                    <p>리팩토링 이유 ❓</p>
-                    <p>⇒ 비용 절감: 오픈 소스 제공  (라이선스 비용 없음)</p>
-                    <p>⇒ 적은 리소스 요구: 상대적으로 적은 리소스 요구,</p>
-                    <p class="mb-2">작은 규모의 프로젝트나 개발 환경에서 가벼운  데이터베이스 솔루션으로 MySQL 선택 가능</p>
-                    <p>5. 아이템 페이지 세션 관련 오류 해결</p>
-                    <p>로그인하지 않은 상태에서 상품상세 페이지 접속 오류 발생</p>
-                    <p>⇒ 원인: 아이템 페이지의 form 액션 태그에 Session에 아이디가 있을 경우만 작동하게 설계</p>
-                    <p>⇒ 해결: 상품 정보 전달을 하는 form 액션 태그에 Session에 아이디가 있는지 여부를 확인하는</p>
-                    <p class="mb-2">조건문(th:if) 추가하여 로그아웃 상태에서도 접근 가능하게 수정</p>
-                    <p>6. 상품 등록 기능 구현</p>
-                    <p>서버 측에서 해당 요청 수신 ⇒ 받은 데이터 디코딩 ⇒ 적절한 데이터베이스 쿼리 사용하여 상품 정보 저장</p>
-                    <p>유연성과 확장성 고려 ⇒ RESTful API 사용하여 클라이언트와 서버 독립적 개발 가능</p>
+                <ul class="mb-5">
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">Java21</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">SpringBoot</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">JPA</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">MySQL</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">Redis</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">Docker</li>
+                </ul>
+                <ul>
+                    <li>• MSA 기반 독립 모듈 서비스: 확장성과 유지보수성 강화</li>
+                    <li>• Docker-Compose: 컨테이너 관리로 개발 환경 표준화</li>
+                    <li>• API Gateway 및 Eureka: 로드밸런싱과 장애 내성 강화</li>
+                    <li>• 주문 상태 자동화: 스케줄러로 상태 업데이트, Redis로 동시성 제어</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-wrap text-xl flex-col pb-7">
+                <ul class="text-base font-light">
+                    <li class="w-full text-3xl font-bold mb-1 float-left ">그르릉 프로젝트(Grr-reung project)</li>
+                    <li class="float-left pl-5 py-3 text-gray"><i class="fa-solid fa-users"></i><span class="pl-2">BE 3인</span></li>
+                    <li class="float-left pl-5 py-3 text-gray"><i class="fa-regular fa-calendar-check"></i><span class="pl-2">2023.11~2023.12</span></li>
+                </ul>
+                <ul class="mb-5 text-base font-light">
+                    <li class="float-left pl-5"><a href="https://github.com/kim-nini/Grrreung" class="block underline p-1 hover:text-stone-500 hover:border-b-1 hover:decoration-2 duration-100">
+                        <i class="fa-brands fa-github"></i><span class="pl-2">Github 바로가기</span></a></li>
+                    <li class="float-left pl-5"><a href="http://grrreung.shop:8090"
+                                              class="block underline p-1 hover:text-stone-500 decoration-1 duration-100">
+                        <i class="fa-solid fa-location-dot"></i><span class="pl-2">배포사이트 바로가기</span></a></li>
+                </ul>
+                <ul class="mb-5">
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">Java17</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">SpringBoot</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">JavaScript</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">MyBatis</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">MySQL</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">EC2</li>
+                    <li class="p-2 mr-3 float-left bg-stone-300 text-sm rounded-xl">RDS</li>
+                </ul>
+                <div class="flex">
+                    <ul>
+                        <li>• AWS 배포: EC2로 웹 서버, RDS로 MySQL 데이터 관리</li>
+                        <li>• DB 리팩토링: Oracle에서 MySQL로 전환해 비용 절감 및 리소스 최적화</li>
+                        <li>• 세션 오류 해결: 로그인 여부에 따른 상품 페이지 접근 문제 수정</li>
+                        <li>• 상품 등록 기능: RESTful API로 클라이언트-서버 독립적 개발 지원</li>
+                        <li class="font-bold pt-3">[담당한 부분]</li>
+                        <li>• 상품 조회</li>
+                        <li>• 상품 관리 기능(관리자)</li>
+                        <li>• 메인화면 프론트 구조 설계</li>
+                        <li>• 서버/데이터베이스 배포</li>
+                    </ul>
+                    <div class="w-64 m-10">
+                        <img th:src="@{/img/grrreung-shop.png}" alt="그르릉 쇼핑몰 프로젝트 메인 이미지">
+                    </div>
                 </div>
             </div>
-            <div class="bg-white p-6 rounded">
-                <h3 class="text-2xl font-medium mb-4">프로젝트명</h3>
-                <div>
-                    <p class="mb-2">준비중입니다</p>
-                </div>
-            </div>
+
         </div>
-    </div>
-
-    <div class="absolute top-[55%] left-1/2 text-2xl">
-            <button type="button" id="prevArrow" class="slick-arrow absolute right-[28.5rem] text-stone-600 hover:text-gray duration-300"><i class="fa-solid fa-chevron-left"></i></button>
-            <button type="button" id="nextArrow" class="slick-arrow absolute left-[28.5rem] text-stone-600 hover:text-gray duration-300"><i class="fa-solid fa-chevron-right"></i></button>
-    </div>
-
-</section>
-
+    </section>
+</th:block>
 
 
 
 <!--<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>-->
-<!--<th:block th:replace="~{fragments/global-config :: global-scripts}"/>-->
+<th:block th:replace="~{fragments/global-config :: global-scripts}"/>
 <script th:src="@{/js/projects-script.js}"></script>
-</th:block>
+
 </body>
 </html>

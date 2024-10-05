@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-background {
+    @apply bg-[url('/img/background-image-main.jpg')] bg-no-repeat bg-scroll bg-cover bg-left-top
+}
 
 .my-header {
     @apply w-screen fixed left-0 top-0 text-black shadow-xl z-50 bg-slate-50
@@ -11,17 +14,17 @@
     @apply h-24 m-auto p-6 float-right pr-24
 }
 .my-top-nav>ul>li {
-    @apply transition duration-150 hover:text-beige
+    @apply transition duration-150 hover:text-gray
 }
 
 /* 좌측 프로필 영역 */
 .wrap-box {
-    @apply w-8/12 h-48 mx-auto bg-gray container
+    @apply w-8/12 h-48 mx-auto container
 }
 
 .profile-wrap {
     @apply h-auto mx-auto container
-    bg-light-beige pt-3.5
+    bg-gray pt-3.5
     absolute -left-60 top-20
     w-[375px]
     shadow-2xl
@@ -107,7 +110,17 @@
 
 /**********************************/
 
+.main-wrap {
+    opacity: 0; /* 초기 상태: 투명하게 */
+    transform: translateY(20px); /* 아래로 이동 */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 애니메이션 효과 */
+}
 
+.main-wrap.main-visible {
+    opacity: 1; /* 보일 때: 불투명하게 */
+    transform: translateY(0); /* 원래 위치로 이동 */
+    @apply shadow-2xl
+}
 
 
 

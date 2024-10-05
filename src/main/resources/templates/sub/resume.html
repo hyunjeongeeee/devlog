@@ -11,118 +11,139 @@
 
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 
-<th:block th:fragment="resume-fragment">
 
+<th:block th:fragment="skill-fragment">
 <!-- 메인 -->
-<section class="w-screen float-left text-center py-24 bg-beige mx-auto">
-
+<section class="w-screen float-left text-gray py-24 bg-cream">
 <!--    <h2 class="text-4xl font-black pt-20 pb-5 text-center">RESUME</h2>-->
     <!--기술스택-->
-    <div class="w-screen pt-10 mx-auto float-left">
-        <div class="w-[48rem] mx-auto">
-            <h2 class="text-4xl font-black pt-20 pb-10 text-center">Skills</h2>
+    <div class="w-3/5 h-full mx-auto py-20">
+        <div class="w-full mx-auto mb-16 pl-6" >
+            <h2 class="text-4xl font-black text-dark-gray mb-4">Skills</h2>
+            <div class="w-14 h-1 bg-dark-gray"> </div>
         </div>
-        <ul class="skills grid gap-6 sm:grid-cols-2 md:grid-cols-4 list-none p-0">
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="java" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">Java</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="javascript" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">Javascript</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="html_css" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">HTML5 & CSS3</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="mysql" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">MySQL</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="oracle" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">Oracle</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="jpa" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">JPA</figcaption>
-                </figure>
-            </li>
+        <div class="flex justify-between">
+            <ul>
+                <li class="text-3xl font-bold mb-3"><h3>언어</h3></li>
+                <li>JAVA</li>
+                <li>Javascript</li>
+                <li>HTML/CSS</li>
+            </ul>
+            <ul>
+                <li class="text-3xl font-bold mb-3"><h3>데이터베이스</h3></li>
+                <li>MySQL</li>
+                <li>Oracle</li>
+                <li>AWS RDS</li>
+                <li>Redis</li>
+            </ul>
+            <ul>
+                <li class="text-3xl font-bold mb-3"><h3>프레임워크/라이브러리</h3></li>
+                <li>SpringBoot</li>
+                <li>MyBatis</li>
+                <li>JPA</li>
+                <li>JSP</li>
+                <li>JQuery</li>
+            </ul>
+            <ul>
+                <li class="text-3xl font-bold mb-3"><h3>컨테이너 및 배포</h3></li>
+                <li>AWS</li>
+                <li>Docker</li>
+            </ul>
 
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="aws" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">AWS</figcaption>
-                </figure>
-            </li>
-            <li class="skills__item flex justify-center">
-                <figure>
-                    <canvas id="docker" width="200" height="200" class="block"></canvas>
-                    <figcaption class="mt-2 text-center font-medium">Docker</figcaption>
-                </figure>
-            </li>
-
-        </ul>
-    </div>
-    <!-- 자격증-->
-    <div class="w-screen pt-10 mx-auto float-left">
-        <div class="w-[48rem] mx-auto">
-            <h2 class="text-4xl font-black pt-20 pb-10 text-center">License</h2>
-        </div>
-
-        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
-                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
-            <div class="w-1/3 text-wrap float-left">
-                <p class="mb-5 p-5">정보처리산업기사</p>
-                <p class="mb-5 p-5">보육교사 자격증(2급)</p>
-                <p class="mb-5 p-5">운전면허보통(2종)</p>
-                <p class="mb-5 p-5">교원자격증(실기교사)</p>
-            </div>
-            <div class="scrollable w-2/3 h-full text-wrap float-left">
-                <p class="mb-5 p-5">한국산업인력공단</p>
-                <p class="mb-5 p-5">보건복지부</p>
-                <p class="mb-5 p-5">경기남부지방경찰청</p>
-                <p class="mb-5 p-5">백석예술대학교</p>
-            </div>
         </div>
     </div>
+</section>
+</th:block>
+
+<!-- 자격증-->
+<th:block th:fragment="license-fragment">
+    <section class="w-screen float-left text-dark-gray py-24">
+        <div class="w-3/5 mx-auto py-20">
+            <div class="w-full mx-auto mb-16 pl-6" >
+                <h2 class="text-4xl font-black text-dark-gray mb-4">License</h2>
+                <div class="w-14 h-1 bg-dark-gray"></div>
+            </div>
+
+            <div class="flex">
+                <div class="w-2 h-[40vh] bg-dark-gray"></div>
+                <div class="flex flex-wrap text-xl flex-col justify-around pl-10 relative">
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-11 bg-white border-solid border-black border-2"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left">정보처리산업기사 자격증</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">한국산업인력공단</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2023.12</li>
+                    </ul>
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-[12.5rem] bg-white border-solid border-black border-4"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left ">자바(JAVA) 웹개발 프로그래밍</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">이젠아카데미 컴퓨터학원</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2023.06 - 2023.11(6개월)</li>
+                    </ul>
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-[22.5rem] bg-white border-solid border-black border-4"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left ">처음시작하는 자바 프로그래밍</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">휴넷(온라인교육)</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2021.07 - 2021.08(1개월)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</th:block>
 
 
-
+<th:block th:fragment="education-fragment">
     <!-- 학력 및 교육 -->
-    <div class="w-screen pt-10 mx-auto float-left">
-        <div class="w-[48rem] mx-auto">
-            <h2 class="text-4xl font-black pt-20 pb-10 text-center">Education</h2>
-        </div>
-
-        <div class="resume-box w-[48rem] h-96 bg-white container p-10 text-left mx-auto mb-32 shadow-lg
-                    opacity-0 translate-y-5 transition-opacity transition-transform duration-500 ease-out">
-            <div class="w-1/3 text-wrap float-left">
-                <p class="mb-5 p-5">항해99</p>
-                <p class="mb-5 p-5">이젠아카데미 컴퓨터학원</p>
-                <p class="mb-5 p-5">휴넷(온라인교육)</p>
-                <p class="mb-5 p-5">백석예술대학교</p>
+    <section class="w-screen float-left text-gray py-24 bg-white">
+        <div class="w-3/5 h-full mx-auto py-20">
+            <div class="w-full mx-auto mb-16 pl-6" >
+                <h2 class="text-4xl font-black text-dark-gray mb-4">Education & License</h2>
+                <div class="w-14 h-1 bg-dark-gray"></div>
             </div>
-            <div class="scrollable w-2/3 h-full text-wrap float-left touch-pan-y focus:scroll-auto">
-                <p class="mb-5 p-5">취업리부트코스(2기)</p>
-                <p class="mb-5 p-5">자바(Java) 웹개발 프로그래밍 정보처리산업기사</p>
-                <p class="mb-5 p-5">처음시작하는 자바프로그래밍-초급</p>
-                <p class="mb-5 p-5">실용음악학과 보컬전공</p>
+
+
+            <div class="flex">
+                <div class="flex flex-wrap text-xl flex-col justify-between pl-20 relative">
+                    <ul class="text-base font-light mt-28 mr-20">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -right-3 top-[8rem] bg-red-200 border-solid border-black border-4"></li>
+                        <li class="w-32 border-stone-400 border-2 border-dashed right-1.5 absolute top-[8.5rem]"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left">정보처리산업기사</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">한국산업인력공단</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2023.12</li>
+                    </ul>
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -right-3 top-[26rem] bg-red-200 border-solid border-black border-4"></li>
+                        <li class="w-32 border-stone-400 border-2 border-dashed right-1.5 absolute top-[26.35rem]"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left">보육교사 자격증</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">보건복지부</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2019.12</li>
+                    </ul>
+                </div>
+                <div class="w-2 h-[40vh] bg-dark-gray"></div>
+                <div class="flex flex-wrap text-xl flex-col justify-around pl-10 relative">
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-11 bg-white border-solid border-black border-4"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left">취업리부트코스</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">항해99</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2024.03 - 2024.06(3개월)</li>
+                    </ul>
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-[12.5rem] bg-white border-solid border-black border-4"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left ">자바(JAVA) 웹개발 프로그래밍</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">이젠아카데미 컴퓨터학원</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2023.06 - 2023.11(6개월)</li>
+                    </ul>
+                    <ul class="text-base font-light">
+                        <li class="w-4 h-4 mb-1 float-left rounded-full absolute -left-3 top-[22.5rem] bg-white border-solid border-black border-4"></li>
+                        <li class="w-full text-3xl font-bold mb-1 float-left ">처음시작하는 자바 프로그래밍</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">휴넷(온라인교육)</li>
+                        <li class="text-base font-light float-left pl-5 py-3 text-gray">2021.07 - 2021.08(1개월)</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
+</th:block>
 
     <!-- 경력 -->
 
@@ -160,11 +181,13 @@
             </div>
         </div>
     </div>
+
 </section>
+
 <!--<footer th:replace="~{fragments/footer :: footer-fragment}"></footer>-->
-<!--<th:block th:replace="~{fragments/global-config :: global-scripts}"/>-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script th:src="@{/js/resume-script.js}"></script>
+<th:block th:replace="~{fragments/global-config :: global-scripts}"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script th:src="@{/js/resume-script.js}"></script>
 <script th:src="@{/js/resume-skills-script.js}"></script>
 </th:block>
 
