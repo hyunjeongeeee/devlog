@@ -14,20 +14,27 @@
 <th:block th:fragment="contact-fragment">
 
 <!-- 메인 -->
-<section class="w-screen float-left text-dark-gray py-24 bg-white">
+<section id="contact" class="w-screen float-left text-dark-gray py-24 bg-white">
     <div class="w-3/5 h-full mx-auto py-20">
         <div class="w-full mx-auto mb-16 pl-6" >
             <h2 class="text-4xl font-black text-dark-gray mb-4">Contact</h2>
-            <div class="w-14 h-1 bg-dark-gray"> </div>
-            <div class="contact-wrap relative top-20 left-52">
-                <a href="tel:010-4374-7470"><span>Phone</span></a>
-                <a href="mailto:hyunjeong9592@gmail.com?subject=안녕하세요."><span>Gmail</span></a>
-                <a href="https://github.com/hyunjeongeeee"><span>Github</span></a>
-                <a href="https://velog.io/@hyunjeong9592/posts"><span>Velog</span></a>
+            <div class="w-14 h-1 bg-dark-gray"></div>
+            <div class="float-left text-2xl flex py-10 leading-loose">
+                <ul class="font-bold mr-10">
+                    <li>Call</li>
+                    <li>Mail</li>
+                    <li>Github</li>
+                    <li>Velog</li>
+    <!--                <li><a href="" download=" ">이력서 다운로드</a></li>-->
+                </ul>
+                <ul>
+                    <li>010 4374 7470</li>
+                    <li><a href="mailto:hyunjeong9592@gmail.com" class="hover:text-stone-500 hover:border-stone-500 hover:underline duration-100">hyunjeong9592@gmail.com</a></li>
+                    <li><a href="https://github.com/hyunjeongeeee" class="hover:text-stone-500 hover:border-stone-500 hover:underline duration-100">https://github.com/hyunjeongeeee</a></li>
+                    <li><a href="https://velog.io/@hyunjeong9592/posts" class="hover:text-stone-500 hover:border-stone-500 hover:underline duration-100">https://velog.io/@hyunjeong9592/posts</a></li>
+                </ul>
             </div>
         </div>
-
-
     </div>
 </section>
 

@@ -1,12 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // const profileBoxes = document.getElementsByClassName('profile-box'); // 여러 요소 선택
-    //
-    // for (let i = 0; i < profileBoxes.length; i++) {
-    //     profileBoxes[i].classList.add('visible'); // 각 요소에 fade-in 효과
-    // }
     const mainWrap = document.getElementsByClassName('main-wrap'); // 여러 요소 선택
 
     for (let i = 0; i < mainWrap.length; i++) {
         mainWrap[i].classList.add('main-visible'); // 각 요소에 fade-in 효과
     }
+});
+
+$(document).ready(function() {
+    // 네비게이션 링크 클릭 이벤트
+    $('nav ul li a').click(function(e) {
+        e.preventDefault(); // 기본 동작 방지 (바로 이동하지 않도록)
+
+        // 클릭한 링크의 href 속성 (예: #header, #resume 등) 가져오기
+        var targetSection = $(this).attr('href');
+
+        // 해당 섹션으로 스크롤 애니메이션 적용
+        $('html, body').animate({
+            scrollTop: $(targetSection).offset().top
+        }, 500); // 500ms 동안 스크롤 (원하는 대로 조정 가능)
+    });
 });

@@ -11,7 +11,7 @@
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 
 <th:block th:fragment="about-fragment">
-<section class="w-screen float-left text-dark-gray py-24">
+<section id ="about-me" class="w-screen float-left text-dark-gray py-24">
     <div class="w-3/5 mx-auto py-20">
         <div class="w-full mx-auto mb-16 pl-6" >
             <h2 class="text-4xl font-black text-dark-gray mb-4">About Me</h2>
@@ -21,63 +21,30 @@
             <img class="w-full" th:src="@{/img/profile.png}" alt="프로필사진">
         </div>
         <div class="flex flex-wrap text-2xl">
-            <ul class="p-10 w-full ">
-                <li class="text-3xl font-bold mb-5 float-left">김 현 정</li>
+            <ul class="p-10 w-full border-b-2 border-solid border-light-gray">
+                <li class="text-3xl font-bold mb-10 float-left">김 현 정</li>
                 <li class="font-light float-left pl-5 py-2">웹 개발자(BE)</li>
-                <li class="clear-both">함께 일 하고 싶은 개발자,</li>
-                <li>포기하지 않고 책임감있게 일하는 개발자입니다.</li>
+<!--                <li class="clear-both"></li>-->
+                <li class="clear-both">포기하지 않고 책임감있게 일하는 개발자입니다.</li>
             </ul>
             <ul class="float-left p-10 font-medium">
-                <li>Call</li>
-                <li>Mail</li>
-                <li>GitHub</li>
-                <li>Home</li>
+                <li class="mb-3"><i class="fa-solid fa-cake-candles"></i>
+                    <span>생년월일</span></li>
+                <li class="mb-3"><i class="fa-solid fa-graduation-cap"></i>
+                    <span>학력</span></li>
+                <li><i class="fa-regular fa-envelope"></i>
+                    <span>메일</span></li>
             </ul>
             <ul class="p-10">
-                <li>010 4374 7470</li>
-                <li>hyunjeong9592@gmail.com</li>
-                <li>github.com/hyunjeongeeee</li>
-                <li>Hanamsi</li>
+                <li class="mb-3">95.09.02</li>
+                <li class="mb-3">백석예술대학교 실용음악과 졸업</li>
+                <li> hyunjeong9592@gmail.com</li>
             </ul>
         </div>
     </div>
 </section>
 </th:block>
 
-<th:block th:fragment="education">
-<section class="w-screen h-screen float-left text-dark-gray py-24">
-    <div class="w-3/5 h-full mx-auto py-20">
-        <div class="w-full mx-auto mb-16 pl-6" >
-            <h2 class="text-4xl font-black text-dark-gray mb-4">About Me</h2>
-            <div class="w-14 h-1 bg-dark-gray"></div>
-        </div>
-
-        <div class="float-left w-[31vh] mr-14">
-            <img class="w-full" th:src="@{/img/profile.png}" alt="프로필사진">
-        </div>
-        <div class="flex flex-wrap text-2xl">
-            <ul class="p-10 w-full ">
-                <li class="text-3xl font-bold mb-5 float-left">김 현 정</li>
-                <li class="font-light float-left pl-5 py-2">웹 개발자(BE)</li>
-                <li class="clear-both">함께 일 하고 싶은 개발자,</li>
-                <li>포기하지 않고 책임감있게 일하는 개발자입니다.</li>
-            </ul>
-            <ul class="float-left p-10 font-medium">
-                <li>Call</li>
-                <li>Mail</li>
-                <li>GitHub</li>
-                <li>Home</li>
-            </ul>
-            <ul class="p-10">
-                <li>010 4374 7470</li>
-                <li>hyunjeong9592@gmail.com</li>
-                <li>github.com/hyunjeongeeee</li>
-                <li>Hanamsi</li>
-            </ul>
-        </div>
-    </div>
-</section>
-</th:block>
 <footer th:replace="~{fragments/footer :: footer-fragment}"></footer>
 </body>
 </html>

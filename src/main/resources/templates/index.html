@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <th:block th:insert="~{fragments/global-config :: global-header}"/>
-    <link rel="stylesheet" th:href="@{/css/contact-css.css}">
-
-    <title>Devlog-Hyunjeong</title>
+    <title>Hyunjeong's Devlog</title>
 </head>
-<body class="bg-white">
+<body class="bg-whiteclass font-noto-sans">
 
 <header th:replace="~{fragments/header :: header-fragment}"></header>
 
 <!-- 메인 페이지 시작부분 -->
-<main class="w-screen h-screen float-left text-center pt-24 main-background">
+<main id="main" class="w-screen h-screen float-left text-center pt-24 main-background">
     <div class="main-wrap w-80 h-80 border-white border-solid border-4 mx-auto mt-52 pt-32 text-ivory bg-transparent">
         <h3 class="text-4xl font-medium mb-2">HYUNJEONG'S</h3>
         <h3 class="text-3xl font-medium">DEVLOG</h3>

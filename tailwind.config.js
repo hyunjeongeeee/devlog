@@ -3,11 +3,10 @@ module.exports = {
   mode: 'jit',  // Just-in-Time 모드 (JIT 모드 활성화)
   content: ["./src/**/*.{html,js}"], // Tailwind가 스타일을 적용할 파일 경로
   theme: {
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
     extend: {// 기본 테마를 확장하거나 덮어쓰기 위해 사용하는 섹션
+      fontFamily: {
+        'noto-sans': ['Noto Sans', 'sans-serif'],
+      },
       colors: {
         'black' : '#131313',
         'ivory' : '#F0F0F0',

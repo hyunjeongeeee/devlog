@@ -8,19 +8,19 @@
 <body>
 
 <th:block th:fragment="header-fragment">
-<header class="my-header">
-
+<header id="header" class="my-header">
     <div class="float-left">
-        <h1 class="text-xl font-bold pl-7 pt-9"><a th:href="@{/}">HYUNJEONG'S DEVLOG</a></h1>
+        <h1 class="text-2xl font-black pl-7 pt-9"><a href="#main">HYUNJEONG'S DEVLOG</a></h1>
     </div>
 
     <!-- TopMenu Area -->
-    <nav class="my-top-nav">
-        <ul class="flex justify-between w-[32rem] pt-3">
-            <li><a th:href="@{/}">ABOUT ME</a></li>
-            <li><a th:href="@{/resume}">RESUME</a></li>
-            <li><a th:href="@{/projects}">PROJECTS</a></li>
-            <li><a th:href="@{/contact}">CONTACT</a></li>
+    <nav class="my-top-nav text-2xl font-bold text-dark-gray">
+        <ul class="flex justify-between w-[44rem] pt-2">
+            <li><a href="#about-me">ABOUT ME</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 </header>

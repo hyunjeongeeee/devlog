@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+}
 .main-background {
     @apply bg-[url('/img/background-image-main.jpg')] bg-no-repeat bg-scroll bg-cover bg-left-top
 }
@@ -14,7 +17,7 @@
     @apply h-24 m-auto p-6 float-right pr-24
 }
 .my-top-nav>ul>li {
-    @apply transition duration-150 hover:text-gray
+    @apply transition duration-150 hover:text-stone-500
 }
 
 /* 좌측 프로필 영역 */
