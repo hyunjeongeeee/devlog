@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 해당 섹션으로 스크롤 애니메이션 적용
         $('html, body').animate({
             scrollTop: $(targetSection).offset().top
-        }, 500); // 500ms 동안 스크롤 (원하는 대로 조정 가능)
+        }, 100, 'linear'); // 500ms 동안 스크롤 (원하는 대로 조정 가능)
     });
 });
