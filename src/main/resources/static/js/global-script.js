@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 클릭한 링크의 href 속성 (예: #header, #resume 등) 가져오기
         var targetSection = $(this).attr('href');
+        var headerHeight = $('#header').outerHeight(); // 헤더 높이 가져오기
 
         // 해당 섹션으로 스크롤 애니메이션 적용
         $('html, body').animate({
-            scrollTop: $(targetSection).offset().top
+            scrollTop: $(targetSection).offset().top - headerHeight
         }, 100, 'linear'); // 500ms 동안 스크롤 (원하는 대로 조정 가능)
     });
 });
