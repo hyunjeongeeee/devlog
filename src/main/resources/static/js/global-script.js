@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < mainWrap.length; i++) {
         mainWrap[i].classList.add('main-visible'); // 각 요소에 fade-in 효과
     }
-});
-
-$(document).ready(function() {
     // 네비게이션 링크 클릭 이벤트
     $('nav ul li a').click(function(e) {
         e.preventDefault(); // 기본 동작 방지 (바로 이동하지 않도록)
