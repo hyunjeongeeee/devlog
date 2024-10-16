@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  web:
+    container_name: web
+    image: hyunjeong9592/devlog-web
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+  nginx:
+    container_name: nginx
+    image: hyunjeong9592/devlog-nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
+
